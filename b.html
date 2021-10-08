@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        .mySlides {
+            display: none;
+        }
+        
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        /* slider */
+        
+        main {
+            display: inline-flex;
+            margin-top: 50px;
+            width: 100%;
+        }
+        
+        #ar1 {
+            width: 45%;
+            height: 200px;
+        }
+        
+        table {
+            text-align: left;
+            line-height: 20px;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 2px solid #34495e;
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+        
+        thead tr:first-child {
+            width: 100%;
+            /* background: #34495e; */
+            color: black;
+            border: none;
+            line-height: 40px;
+        }
+        
+        thead tr th:nth-child(2) {
+            padding-left: 20px;
+            height: 50px;
+        }
+        
+        .Back,
+        .forward {
+            cursor: pointer;
+            position: absolute;
+            top: 48%;
+            width: auto;
+            margin-top: -23px;
+            padding: 17px;
+            color: grey;
+            font-weight: bold;
+            font-size: 25px;
+            transition: 0.4s ease;
+            border-radius: 0 5px 5px 0;
+            user-select: none;
+        }
+        /* Place the "forward button" to the right */
+        
+        .forward {
+            right: 0;
+            border-radius: 4px 0 0 4px;
+        }
+        /*when the user hovers,add a black background with some little opacity */
+        
+        .Back:hover,
+        .forward:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* Dots */
+        
+        .dots {
+            cursor: pointer;
+            height: 16px;
+            width: 16px;
+            margin: 0 3px;
+            background-color: rgb(175, 170, 204);
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.5s ease;
+        }
+        
+        .enable,
+        .dots:hover {
+            background-color: #f0f01d;
+        }
+        /* Button used to open the chat form - fixed at the bottom of the page */
+        
+        .open-button {
+            background-image: url(./chatbox.jpg);
+            background-size: cover;
+            background-position: center;
+            border-radius: 20%;
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 250px;
+            right: 0px;
+            width: 40px;
+            height: 30px;
+        }
+        /* The popup chat - hidden by default */
+        
+        .chat-popup {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid blue;
+            z-index: 9;
+        }
+        /* Add styles to the form container */
+        
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+        /* Full-width textarea */
+        
+        .form-container textarea {
+            border-radius: 10%;
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+            resize: none;
+            min-height: 200px;
+        }
+        /* When the textarea gets focus, do something */
+        
+        .form-container textarea:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+        /* Set a style for the submit/send button */
+        
+        .form-container .btn {
+            background-color: #04AA6D;
+            color: rgba(255, 255, 255, 0.5);
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+            border-radius: 25%;
+        }
+        /* Add a red background color to the cancel button */
+        
+        .form-container .cancel {
+            background-color: red;
+            border-radius: 25%;
+        }
+        /* Add some hover effects to buttons */
+        
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+        
+        .class1 {
+            margin-top: 20px;
+            width: 100%;
+            border: 2px solid red;
+            height: 900px
+        }
+        
+        .class1 {
+            background-image: url(./rank1.jpg);
+            background-size: cover;
+            justify-content: center;
+        }
+        
+        .image {
+            height: 100%;
+            width: 49%;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <a class="navbar-brand" href="#">Online Admission Portal</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="./b.html">Home</a></li>
+                    <li><a href="./newadmission.html">New Admission</a></li>
+                    <li><a href="#">Admission</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+
+
+    <!-- slider -->
+
+
+    <div class="w3-content w3-section" style="width: 100%; height: 100vh;">
+        <img class="mySlides" src="./graduation-5017069.jpg" style="width:100%;height: 100vh;">
+        <img class="mySlides" src="./images.jpg" style="width:100%;height:
+                100vh;">
+        <img class="mySlides" src="./photo-1509062522246-3755977927d7.jpg" style="width:100%;height: 100vh;">
+
+        <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- The circles/dots -->
+        <!-- <div style="text-align: end;">
+            <span class="dots" onclick="currentSlide(1)"></span>
+            <span class="dots" onclick="currentSlide(2)"></span>
+            <span class="dots" onclick="currentSlide(3)"></span>
+        </div> -->
+    </div>
+    <!-- chatbox -->
+    <button class="open-button" onclick="openForm()"></button>
+
+
+    <div class="chat-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Chat</h1>
+
+            <label for="msg"><b>Message</b></label>
+            <textarea placeholder="Type message.." name="msg" required></textarea>
+            <button type="submit" class="btn">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+
+    <!-- --------------------------------------------------------------------------------------------- -->
+    <!-- rachit -->
+
+    <div class="class1">
+        <div class="image"></div>
+        <div class="image"></div>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
