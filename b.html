@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -36,30 +38,6 @@
         #ar1 {
             width: 45%;
             height: 200px;
-        }
-        
-        table {
-            text-align: left;
-            line-height: 20px;
-            border-collapse: separate;
-            border-spacing: 0;
-            border: 2px solid #34495e;
-            width: 80%;
-            margin: 20px auto;
-            border-radius: 5px;
-        }
-        
-        thead tr:first-child {
-            width: 100%;
-            /* background: #34495e; */
-            color: black;
-            border: none;
-            line-height: 40px;
-        }
-        
-        thead tr th:nth-child(2) {
-            padding-left: 20px;
-            height: 50px;
         }
         
         .Back,
@@ -187,22 +165,60 @@
         }
         
         .class1 {
-            margin-top: 20px;
             width: 100%;
-            border: 2px solid red;
-            height: 900px
-        }
-        
-        .class1 {
-            background-image: url(./rank1.jpg);
-            background-size: cover;
+            float: left;
             justify-content: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
         
-        .image {
-            height: 100%;
-            width: 49%;
-            display: flex;
+        #hey {
+            width: 100%;
+            height: 200px;
+            border: 2px solid;
+        }
+        /* footer  */
+        
+        table {
+            text-align: left;
+            line-height: 20px;
+            border-collapse: separate;
+            border-spacing: 0;
+            border: 2px solid #34495e;
+            width: 80%;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+        
+        thead tr:first-child {
+            width: 100%;
+            /* background: #34495e; */
+            color: black;
+            border: none;
+            line-height: 40px;
+        }
+        
+        thead tr th:last-child {
+            text-align: center;
+            line-height: 40px;
+        }
+        
+        thead tr th:nth-child(3) {
+            padding-left: 20px;
+        }
+        
+        th:first-child,
+        td:first-child {
+            padding: 0 15px 0 20px;
+        }
+        
+        thead tr:last-child th {
+            border-bottom: 4px solid #ddd;
+        }
+        
+        i:hover {
+            background-color: red;
         }
     </style>
 </head>
@@ -222,10 +238,10 @@
             <div id="navbar" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="./b.html">Home</a></li>
-                    <li><a href="./newadmission.html">New Admission</a></li>
-                    <li><a href="#">Admission</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="./registration.html">New Admission</a></li>
+                    <li><a href="./loginForm.html">Student</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contactUs.html">Contact</a></li>
 
 
                 </ul>
@@ -302,10 +318,99 @@
     <!-- rachit -->
 
     <div class="class1">
-        <div class="image"></div>
-        <div class="image"></div>
+        <img src="rank1.png" width="100%">
+        <img src="topPlacement.png" width="100%">
 
     </div>
+    <div style="position: absolute; right: 10px; top: 10px; font-size: 30px; color: red;">
+        FEW OF THE FORTUNE 500 EMPLOYEES WHO RECRUITS FROM MINE
+    </div>
+    <DIV>SOME TOP GLOBAL UNIVERSITIES WHERE MINE STUDENTS ARE PERSUING HIGHER STUDIES</DIV>
+    <!-- -----------------------------------------------  -->
+    <!-- footer  -->
+    <section class="main-content"></section>
+    <footer>
+        <section class="sec-1">
+            <section class="about">
+                <h2>About</h2>
+                <p>
+                    Iure perspiciatis magnam culpa debitis sint illum ea vel deserunt facere, expedita libero alias sunt quas odio sit repellat dolore placeat tenetur illo magni delectus error! Sunt commodi magnam recusandae ullam exercitationem sit, culpa voluptatibus eum
+                    reiciendis praesentium earum ducimus molestiae suscipit perspiciatis ex dignissimos enim consequatur maiores vitae fugit?
+                </p>
+            </section>
+            <section class="link1">
+                <h2>COURSES</h2>
+                <ul>
+                    <li><a href="#">B.Tech</a></li>
+                    <li><a href="#">MBA</a></li>
+                    <li><a href="#">MCA</a></li>
+                    <li><a href="#">BCA</a></li>
+                    <li><a href="#">BBA</a></li>
+                    <li><a href="#">B.SC</a></li>
+                </ul>
+            </section>
+            <section class="link2">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contactUs.html">Contact Us</a></li>
+                    <li><a href="#">Contribute</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Disclaimer</a></li>
+                </ul>
+            </section>
+            <section class="link3">
+                <h2>Contact Us</h2>
+                <ul>
+                    <li>
+                        <i class="fa fa-home"></i> <span>Mathura, India</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <span>vivekkumarava1@gmail.com</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-phone-square"></i>
+                        <span>Mobile: 6377705297</span>
+                    </li>
+                    <li>
+                        <i class="fa fa-instagram"></i>
+                        <a href="https://www.instagram.com/_i.vivekkumar/">instagram</a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <hr width="100%" noshade/>
+        <section class="sec-2">
+            <p>Register for Free</p>
+            <a href="./registration.html">signup!</a>
+        </section>
+        <hr width="100%" noshade/>
+        <section class="sec-3">
+            <ul>
+                <li>
+                    <a href="https://www.instagram.com/_i.vivekkumar/"><i class="fa fa-instagram"></i></a>
+                </li>
+
+                <li>
+                    <a href="https:/www.google.com"><i class="fa fa-google"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/vivek-kumar-580b35204/"><i class="fa fa-linkedin"></i></a>
+                </li>
+            </ul>
+        </section>
+        <section class="sec-4">
+            <p>
+                Copyright © 2021 All Rights Reserved by -VIVEK KUMAR</h2>
+            </p>
+        </section>
+    </footer>
+
+
+
+
+
 
 
 
