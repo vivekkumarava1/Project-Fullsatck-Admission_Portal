@@ -4,13 +4,17 @@
     <title>
         Registration Page
     </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <style>
-        * {
-            padding: 0px;
-            margin: 0px;
-            box-sizing: border-box;
-        }
-        
         Body {
             font-family: Arial, Helvetica, sans-serif;
             /* background-color: skyblue;   */
@@ -20,24 +24,24 @@
             font-size: 20px;
         }
         
-        .container {
+        .container1 {
+            margin-top: 20px;
             margin-left: 35%;
             text-align: center;
             justify-content: center;
             border: 2px solid;
             width: 550px;
-            height: 600px;
+            height: 750px;
             display: flex;
             background-color: rgb(221, 205, 182);
             border-radius: 5%;
         }
-        
-        .name {
+        /* .name {
             margin-top: 20px;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             text-align: center;
             justify-content: center;
-        }
+        } */
         
         .imge {
             text-align: center;
@@ -69,6 +73,31 @@
 </head>
 
 <body style="background-color: cadetblue;">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <a class="navbar-brand" href="#">Online Admission Portal</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="./b.html">Home</a></li>
+                    <li><a href="./registration.html">New Admission</a></li>
+                    <li><a href="./loginForm.html">Student</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contactUs.html">Contact</a></li>
+
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
     <br>
     <br>
     <div class="imge">
@@ -77,11 +106,11 @@
     <center>
         <h1> Registration Form </h1>
     </center>
-    <div class="container">
+    <div class="container1">
         <form>
             <div class="name">
                 <label> Firstname </label>
-                <input type="text" name="firstname" size="20" placeholder=" Enter FirstName" required /> <br> <br>
+                <input type="text" name="firstname" size="15" placeholder=" Enter FirstName" required /> <br> <br>
                 <label> Middlename: </label>
                 <input type="text" name="middlename" size="15" placeholder=" Enter MiddleName" /> <br> <br>
                 <label> Lastname: </label>
@@ -125,7 +154,7 @@
             <br> <br> Password:
             <input type="Password" id="pass" name="pass" required placeholder=" Enter the password"> <br>
             <br> <br> Re-type password:
-            <input type="Password" id="repass" name="repass" placeholder=" Renter the password" required> <br> <br>
+            <input type="Password" id="repass" name="repass" placeholder=" Renter the password" required> <br>
             <button type="submit">Submit</button>
         </form>
     </div>

@@ -4,6 +4,16 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> Login Page </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <style>
         Body {
             font-family: Arial, Helvetica, sans-serif;
@@ -52,20 +62,21 @@
             margin: 10px 5px;
         }
         
-        .container {
+        .container1 {
             padding: 25px;
             background-color: rgb(209, 125, 209);
             width: 400px;
-            margin-left: 35%;
+            margin-left: 40%;
             /* margin: 40px; */
             border-radius: 25px;
         }
         
-        .container a {
+        .container1 a {
             text-decoration: none;
         }
         
         .imge {
+            margin-top: 100px;
             text-align: center;
             /* display: block; */
         }
@@ -78,6 +89,31 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                <a class="navbar-brand" href="#">Online Admission Portal</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="./b.html">Home</a></li>
+                    <li><a href="./registration.html">New Admission</a></li>
+                    <li><a href="./loginForm.html">Student</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contactUs.html">Contact</a></li>
+
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
     <div class="imge">
         <img src="./gla.jpg" alt="">
     </div>
@@ -85,7 +121,7 @@
         <h1> Login Form </h1>
     </center>
     <form>
-        <div class="container">
+        <div class="container1">
             <label>Username : </label>
             <input type="text" placeholder="Enter Username" name="username" required>
             <label>Password : </label>

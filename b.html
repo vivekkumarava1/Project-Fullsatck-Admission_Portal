@@ -220,6 +220,27 @@
         i:hover {
             background-color: red;
         }
+        
+        .photoOver {
+            height: 700px;
+            width: 600px;
+            background-color: rgb(240, 240, 46);
+            opacity: initial;
+            position: absolute;
+            right: 30px;
+            bottom: 50px;
+            border-radius: 40px;
+        }
+        
+        .listCll {
+            font-size: 20px;
+            color: black;
+            padding-left: 30px;
+            padding-right: 18px;
+            list-style-type: disc;
+            list-style: inside;
+            padding-left: 30px;
+        }
     </style>
 </head>
 
@@ -255,11 +276,11 @@
     <!-- slider -->
 
 
-    <div class="w3-content w3-section" style="width: 100%; height: 100vh;">
-        <img class="mySlides" src="./graduation-5017069.jpg" style="width:100%;height: 100vh;">
-        <img class="mySlides" src="./images.jpg" style="width:100%;height:
+    <div class="w3-content w3-section" style="width: 100%; height: 100vh; position: relative;">
+        <img class="mySlides" src="./pexels-nubia-navarro-(nubikini)-1110355.jpg" style="width:100%;height: 100vh;">
+        <img class="mySlides" src="./pexels-pixabay-159775.jpg" style="width:100%;height:
                 100vh;">
-        <img class="mySlides" src="./photo-1509062522246-3755977927d7.jpg" style="width:100%;height: 100vh;">
+        <img class="mySlides" src="./pexels-pixabay-267885.jpg" style="width:100%;height: 100vh;">
 
         <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
         <a class="forward" onclick="plusSlides(1)">&#10095;</a>
@@ -270,6 +291,20 @@
             <span class="dots" onclick="currentSlide(2)"></span>
             <span class="dots" onclick="currentSlide(3)"></span>
         </div> -->
+    </div>
+    <div class="photoOver">
+        <p style="font-size: 50px; color: black; font-weight: bold; padding-top: 30px; text-align: center;">GOAT College</p>
+        <p style="font-size: 30px; color:black; padding: 20px; font-family: Lucida Handwriting;">Celebrating over a decade of leadership in education</p>
+        <p class="listCll">GOAT Educational Institutions (GEI) comprising of GOAT Institute of Management & Technology (GIMT), GOAT College of Engineering & Technology (GCET) and GOAT College of Pharmacy (GCP) were founded by Smt. Shakuntla Educational and Welfare Society.</p>
+        <br><br>
+        <ul>
+            <li class="listCll">To provide state-of-the-art infrastructural facilities that support achieving academic excellence.</li>
+            <br>
+            <li class="listCll">To provide a work environment that is conducive for professional growth of faculty & staff.</li>
+            <br>
+            <li class="listCll">To collaborate with industry for achieving excellence in research, consultancy and entrepreneurship development.</li>
+        </ul>
+        <p></p>
     </div>
     <!-- chatbox -->
     <button class="open-button" onclick="openForm()"></button>
@@ -316,6 +351,8 @@
 
     <!-- --------------------------------------------------------------------------------------------- -->
     <!-- rachit -->
+
+
 
     <div class="class1">
         <img src="rank1.png" width="100%">
